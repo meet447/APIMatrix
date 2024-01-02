@@ -25,7 +25,7 @@ def music_page():
 
 @app.route("/api/music/<name>")
 def music_docs(name):
-    readme_path = f"api/music/{name}/README.md"
+    readme_path = f"app/api/music/{name}/README.md"
     if os.path.exists(readme_path):
         with open(readme_path) as file:
             return file.read()
