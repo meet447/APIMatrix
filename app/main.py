@@ -54,3 +54,5 @@ def paagalnew_bollywood(page):
 #paagalnew end
 
 #Music Api End
+
+app.run(host="0.0.0.0", debug=False)
