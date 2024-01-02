@@ -1,6 +1,6 @@
 from flask import *
 import requests
-from scrapper.music.paagalnew.main import PaagalNew
+from app.music.paagalnew.main import PaagalNew
 import os
 
 app = Flask(__name__)
