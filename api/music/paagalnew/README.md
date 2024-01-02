@@ -1,5 +1,3 @@
-Certainly! Below is a detailed documentation including response and data examples for the PaagalNew API methods.
-
 # PaagalNew API Documentation
 
 Welcome to the PaagalNew API documentation! This guide provides details on the available endpoints for retrieving information about songs, albums, and the latest releases from the PaagalNew website.
