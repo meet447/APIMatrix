@@ -1,6 +1,6 @@
 from flask import *
 import requests
-from api.music.paagalnew.main import PaagalNew
+from services.music.paagalnew.main import PaagalNew
 import os
 
 app = Flask(__name__)
