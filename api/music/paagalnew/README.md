@@ -2,6 +2,15 @@
 
 Welcome to the PaagalNew API documentation! This guide provides details on the available endpoints for retrieving information about songs, albums, and the latest releases from the PaagalNew website.
 
+## Routes
+
+| Endpoint                         |                                                              Description | Status  |  
+|----------------------------------|--------------------------------------------------------------------------|---------|
+| /paagalnew/song/search/<title>   | Search for songs on PaagalNew by title.                                  | Working |   
+| /paagalnew/album/details/<album> | Retrieve details of an album on PaagalNew by album name.                 | Working |   
+| /paagalnew/song/details/<href>   | Get detailed information about a song on PaagalNew by its href.          | Working |   
+| /paagalnew/bollywood/<page>	   | Fetch the latest Bollywood songs on PaagalNew, paginated by page number. | Working |   
+
 ## 1. Search Songs
 
 ### Endpoint:
