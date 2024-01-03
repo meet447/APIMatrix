@@ -2,6 +2,7 @@ from flask import *
 import requests
 from app.music.paagalnew.main import PaagalNew
 import os
+from app import main
 
 app = Flask(__name__)
 
