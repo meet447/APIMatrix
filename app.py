@@ -1,6 +1,7 @@
 from flask import *
 from api.music.paagalnew.main import PaagalNew
 from api.manga.comick.main import Comick
+from api.llm.gp4.main import gpt4
 import os
 
 app = Flask(__name__)
@@ -101,6 +102,11 @@ def comick_images(hid):
     return Comick.chapter_images(hid)
 
 #Comick.cc End
+
+@app.route("/api/llm/gpt4/bard/<message>")
+def gpt_bard(message):
+    response = gpt4.bing(message)
+    return jsonify({"response": response})
 
 #Manga Api End
 
