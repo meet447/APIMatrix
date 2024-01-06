@@ -1,7 +1,7 @@
 from flask import *
 from api.music.paagalnew.main import PaagalNew
 from api.manga.comick.main import Comick
-from api.llm.gp4.main import gpt4
+from api.llm.gpt4.main import gpt4
 import os
 
 app = Flask(__name__)
@@ -43,10 +43,6 @@ def file_docs(route, name):
 
 #Music API
 
-@app.route("/api/music")
-def music_page():
-    return "under construction docs"
-
 #paagalnew start
 
 @app.route("/api/music/paagalnew/song/search/<title>", methods=['POST', 'GET'])
@@ -70,11 +66,6 @@ def paagalnew_bollywood(page):
 
 #Music Api End
 
-#Manga Api Start
-
-@app.route("/api/manga")
-def manga_page():
-    return "UNDER CONSTRUCTUON"
 
 #Comick.cc start
 
