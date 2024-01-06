@@ -16,22 +16,36 @@ def id_page():
 
 @app.route("/api")
 def api_page():
-    return "api working"
+    readme_path = "README.md"
+    if os.path.exists(readme_path):
+        with open(readme_path) as file:
+            return file.read()
+    else:
+        return "README not found", 404
+
+@app.route("/api/<route>")
+def manga_docs(route, ):
+    readme_path = f"api/{route}/README.md"
+    if os.path.exists(readme_path):
+        with open(readme_path) as file:
+            return file.read()
+    else:
+        return "README not found", 404
+
+@app.route("/api/<route>/<name>")
+def manga_docs(route, name):
+    readme_path = f"api/{route}/{name}/README.md"
+    if os.path.exists(readme_path):
+        with open(readme_path) as file:
+            return file.read()
+    else:
+        return "README not found", 404
 
 #Music API
 
 @app.route("/api/music")
 def music_page():
     return "under construction docs"
-
-@app.route("/api/music/<name>")
-def music_docs(name):
-    readme_path = f"api/music/{name}/README.md"
-    if os.path.exists(readme_path):
-        with open(readme_path) as file:
-            return file.read()
-    else:
-        return "README not found", 404
 
 #paagalnew start
 
@@ -64,14 +78,7 @@ def manga_page():
 
 #Comick.cc start
 
-@app.route("/api/manga/<name>")
-def manga_docs(name):
-    readme_path = f"api/manga/{name}/README.md"
-    if os.path.exists(readme_path):
-        with open(readme_path) as file:
-            return file.read()
-    else:
-        return "README not found", 404
+
     
 @app.route("/api/manga/comick/top", methods=['POST', 'GET'])
 def comick_top():
