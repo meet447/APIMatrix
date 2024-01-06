@@ -103,7 +103,7 @@ def comick_images(hid):
 
 #Comick.cc End
 
-@app.route("/api/llm/gpt4/bard/<message>")
+@app.route("/api/llm/gpt4/bing/<message>")
 def gpt_bard(message):
     response = gpt4.bing(message)
     return jsonify({"response": response})
