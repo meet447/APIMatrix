@@ -24,7 +24,7 @@ def api_page():
         return "README not found", 404
 
 @app.route("/api/<route>")
-def manga_docs(route, ):
+def api_docs(route, ):
     readme_path = f"api/{route}/README.md"
     if os.path.exists(readme_path):
         with open(readme_path) as file:
@@ -33,7 +33,7 @@ def manga_docs(route, ):
         return "README not found", 404
 
 @app.route("/api/<route>/<name>")
-def manga_docs(route, name):
+def file_docs(route, name):
     readme_path = f"api/{route}/{name}/README.md"
     if os.path.exists(readme_path):
         with open(readme_path) as file:
